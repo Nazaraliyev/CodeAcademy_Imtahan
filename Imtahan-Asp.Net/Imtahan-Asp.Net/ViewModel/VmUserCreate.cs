@@ -26,12 +26,12 @@ namespace Imtahan_Asp.Net.ViewModel
         public string Phone { get; set; }
 
 
-        [MaxLength(50), MinLength(5), Required,]
+        [MaxLength(100), MinLength(5), Required,]
         public string Password { get; set; }
 
 
 
-        [MaxLength(50), MinLength(5), Required, Compare("Password"), Display(Name = "Confirm Password")]
+        [MaxLength(100), MinLength(5), Required, Compare("Password"), Display(Name = "Confirm Password")]
         public string CoPassword { get; set; }
     }
 }

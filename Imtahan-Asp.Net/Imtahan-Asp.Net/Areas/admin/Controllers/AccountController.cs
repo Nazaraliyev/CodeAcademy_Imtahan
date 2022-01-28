@@ -115,11 +115,59 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
         }
 
 
+        public async Task<IActionResult> Delete(string Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            if (await _userManager.FindByIdAsync(Id) == null)
+            {
+                return NotFound();
+            }
+
+            var result = await _userManager.DeleteAsync(await _userManager.FindByIdAsync(Id));
+            if (result.Succeeded)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            return NotFound();
+
+        }
+
+
 
 
         public IActionResult Login()
         {
+            if (_signInManager.IsSignedIn(User))
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Login(VmUserLogin model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            };
+
+            var result = await _signInManager.PasswordSignInAsync(model.Login, model.Password, false, false);
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "Login or Password is not correct");
+                return View(model);
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
+
+
     }
 }
