@@ -111,12 +111,6 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
 
             TeamPosition position = await _context.teamPositions.FindAsync(Id);
 
-            if (position.Teams != null)
-            {
-                HttpContext.Session.SetString("pDelete", "Not Allowed this proces");
-                return RedirectToAction(nameof(Index));
-            }
-
             _context.teamPositions.Remove(position);
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
