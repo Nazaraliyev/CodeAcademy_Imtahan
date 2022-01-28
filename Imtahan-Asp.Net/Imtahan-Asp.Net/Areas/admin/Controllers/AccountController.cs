@@ -67,6 +67,31 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
             return View();
         }
 
+        public async Task<IActionResult> Update(string Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            if (await _userManager.FindByIdAsync(Id) == null)
+            {
+                return NotFound();
+            }
+
+
+            CustomUser user = await _userManager.FindByIdAsync(Id);
+            VmUserUpdate model = new VmUserUpdate()
+            {
+                Name = user.Name,
+                Surname = user.Surname,
+                Email = user.Email,
+                Phone = user.PhoneNumber
+            };
+
+            return View(model);
+        }
+
 
 
 
