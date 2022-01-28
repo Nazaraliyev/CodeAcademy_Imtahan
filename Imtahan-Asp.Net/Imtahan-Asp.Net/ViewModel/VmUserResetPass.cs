@@ -9,6 +9,8 @@ namespace Imtahan_Asp.Net.ViewModel
     public class VmUserResetPass
     {
 
+        public string Id { get; set; }
+
         [MaxLength(100), MinLength(5), Required,]
         public string Password { get; set; }
 

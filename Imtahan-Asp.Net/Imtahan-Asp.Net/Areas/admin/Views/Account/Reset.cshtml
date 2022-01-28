@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
     <h2 class="mb-5">Users Password Reset</h2>
-    <form class="w-50" asp-action="create" method="post">
+    <form class="w-50" asp-action="reset" method="post">
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="mb-3">
             <label asp-for="@Model.Password" class="form-label">Password</label>
@@ -13,6 +13,7 @@
             <label asp-for="@Model.CoPassword" class="form-label">Confirm Password</label>
             <input type="password" class="form-control" asp-for="@Model.CoPassword">
         </div>
+        <input asp-for="@Model.Id" hidden/>
         <button class="btn btn-primary mr-3" type="submit" onclick="return confirm('Are You Sure?')">Reset</button>
         <a asp-action="Index" class="text-danger">Go to Back</a>
     </form>

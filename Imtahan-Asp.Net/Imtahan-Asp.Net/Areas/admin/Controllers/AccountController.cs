@@ -151,20 +151,28 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
                 return NotFound();
             }
 
-
-            return View();
+            VmUserResetPass model = new VmUserResetPass()
+            {
+                Id = Id
+            };
+            return View(model);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Reset(VmUserResetPass model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
 
-        //public async Task<IActionResult> Reset(VmUserResetPass model)
-        //{
-        //    if (!ModelState.IsValid)
-        //    {
-        //        return View(model);
-        //    }
+            CustomUser user = await _userManager.FindByIdAsync(model.Id);
+            string newPass = _userManager.PasswordHasher.HashPassword(user,model.Password);
+            user.PasswordHash = newPass;
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
 
-
-        //}
+        }
 
 
 
