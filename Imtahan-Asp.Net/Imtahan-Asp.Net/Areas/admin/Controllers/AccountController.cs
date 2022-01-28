@@ -1,5 +1,6 @@
 ﻿using Imtahan_Asp.Net.Data;
 using Imtahan_Asp.Net.Models;
+using Imtahan_Asp.Net.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,13 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
             return View(await _userManager.Users.ToListAsync());
         }
 
+
+
+        public IActionResult Create()
+        {
+            VmUserCreate
+            return View();
+        }
 
 
 
