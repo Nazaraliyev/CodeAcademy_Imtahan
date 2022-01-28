@@ -1,5 +1,6 @@
 ﻿using Imtahan_Asp.Net.Data;
 using Imtahan_Asp.Net.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -93,6 +94,32 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
 
+        }
+
+
+        public async Task<IActionResult> Delete(int? Id)
+        {
+            if(Id == null)
+            {
+                return NotFound();
+            }
+
+            if(! await _context.teamPositions.AnyAsync(tp => tp.Id == Id))
+            {
+                return NotFound();
+            }
+
+            TeamPosition position = await _context.teamPositions.FindAsync(Id);
+
+            if (position.Teams != null)
+            {
+                HttpContext.Session.SetString("pDelete", "Not Allowed this proces");
+                return RedirectToAction(nameof(Index));
+            }
+
+            _context.teamPositions.Remove(position);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
 
 
