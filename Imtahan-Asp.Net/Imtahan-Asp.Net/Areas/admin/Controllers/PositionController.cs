@@ -1,4 +1,5 @@
 ﻿using Imtahan_Asp.Net.Data;
+using Imtahan_Asp.Net.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -29,6 +30,46 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
         {
             return View();
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Create(TeamPosition model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            if(await _context.teamPositions.AnyAsync(tp => tp.Name == model.Name))
+            {
+                ModelState.AddModelError("", "This Position has exist in Position List");
+                return View(model);
+            }
+
+            var result = _context.teamPositions.Add(model);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+
+        public async Task<IActionResult> Update(int? Id)
+        {
+            if(Id == null)
+            {
+                return NotFound();
+            }
+
+            if(await _context.teamPositions.FindAsync(Id) == null)
+            {
+                return NotFound();
+            }
+
+            return View(await _context.teamPositions.FindAsync(Id));
+        }
+
+
 
 
 
