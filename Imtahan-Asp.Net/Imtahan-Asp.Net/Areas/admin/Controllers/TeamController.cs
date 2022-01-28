@@ -32,5 +32,15 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
             };
             return View(model);
         }
+
+        public async Task<IActionResult> Create()
+        {
+            VmTeamCreate model = new VmTeamCreate()
+            {
+                teamPositions = await _context.teamPositions.ToListAsync(),
+            };
+
+            return View(model);
+        }
     }
 }
