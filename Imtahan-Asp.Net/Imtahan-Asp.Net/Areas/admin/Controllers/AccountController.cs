@@ -18,7 +18,7 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
         private readonly SignInManager<CustomUser> _signInManager;
         private readonly UserManager<CustomUser> _userManager;
 
-        public AccountController(AppDbContext context, SignInManager<CustomUser> signInManager, UserManager<CustomUser> userManager )
+        public AccountController(AppDbContext context, SignInManager<CustomUser> signInManager, UserManager<CustomUser> userManager)
         {
             _context = context;
             _signInManager = signInManager;
@@ -44,7 +44,7 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(model);
             }
 
             CustomUser user = new CustomUser()
@@ -64,7 +64,7 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
             {
                 return RedirectToAction(nameof(Index));
             }
-            return View();
+            return View(model);
         }
 
         public async Task<IActionResult> Update(string Id)
@@ -83,6 +83,7 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
             CustomUser user = await _userManager.FindByIdAsync(Id);
             VmUserUpdate model = new VmUserUpdate()
             {
+                Id = user.Id,
                 Name = user.Name,
                 Surname = user.Surname,
                 Email = user.Email,
@@ -90,6 +91,27 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
             };
 
             return View(model);
+        }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> Update(VmUserUpdate model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            CustomUser user = await _userManager.FindByIdAsync(model.Id);
+
+            user.Name = model.Name;
+            user.Surname = model.Surname;
+            user.Email = model.Email;
+            user.UserName = model.Email;
+            user.PhoneNumber = model.Phone;
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
         }
 
 

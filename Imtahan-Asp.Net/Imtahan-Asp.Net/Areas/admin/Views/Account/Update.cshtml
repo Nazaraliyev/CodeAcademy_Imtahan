@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
     <h2 class="mb-5">Update Users</h2>
-    <form class="w-50" asp-action="create" method="post">
+    <form class="w-50" asp-action="update" method="post">
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="mb-3">
             <label asp-for="@Model.Name" class="form-label">Name</label>
@@ -21,6 +21,8 @@
             <label asp-for="@Model.Phone" class="form-label">Phone</label>
             <input type="number" class="form-control" asp-for="@Model.Phone">
         </div>
+
+        <input asp-for="@Model.Id" hidden/>
 
         <button class="btn btn-primary mr-3" type="submit">Update Now</button>
         <a asp-action="Index" class="text-danger">Go to Back</a>
