@@ -156,3 +156,5 @@ C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\o
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Home\Index.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Account\Login.cshtml.g.cs

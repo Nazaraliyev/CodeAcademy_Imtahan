@@ -7,9 +7,15 @@ using System.Threading.Tasks;
 namespace Imtahan_Asp.Net.Areas.admin.Controllers
 {
     [Area("admin")]
-    public class HomeController : Controller
+    public class AccountController : Controller
     {
         public IActionResult Index()
+        {
+            return View();
+        }
+
+
+        public IActionResult Login()
         {
             return View();
         }
