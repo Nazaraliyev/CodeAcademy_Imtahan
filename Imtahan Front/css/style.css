@@ -91,6 +91,17 @@ section:first-child {
   font-size: 14px;
 }
 
+#work {
+  background-image: url("../img/workspace-sub.jpg");
+  background-position: cover;
+  background-attachment: fixed;
+}
+
+#work .row {
+  padding: 200px 0;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 #portfolio {
   color: rgba(0, 0, 0, 0.5);
 }
