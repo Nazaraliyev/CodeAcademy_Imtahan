@@ -1,0 +1,37 @@
+﻿@model List<TeamPosition>
+
+
+<div class="container-fluid">
+    <h2 class="mb-5">Team Positions</h2>
+    <a asp-action="create" class="btn btn-primary mb-3">Create New Position</a>
+    <table class="table table-striped w-50">
+        <thead >
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Modify</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 1;
+
+                foreach (var user in Model)
+                {
+                    <tr>
+                        <th scope="row">@i</th>
+                        <td>@user.Name</td>
+                        <td>
+                            <a asp-action="Update" class="btn btn-success" asp-route-id="@user.Id">Update</a>
+                            <a asp-action="delete" class="btn btn-danger" asp-route-id="@user.Id" onclick="return confirm('Are you sure?')">Delete</a>
+                        </td>
+
+                    </tr>
+
+                    i++;
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
