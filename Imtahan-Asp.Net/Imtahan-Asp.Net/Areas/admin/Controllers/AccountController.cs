@@ -139,6 +139,34 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
 
 
 
+        public async Task<IActionResult> Reset(string Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            if (await _userManager.FindByIdAsync(Id) == null)
+            {
+                return NotFound();
+            }
+
+
+            return View();
+        }
+
+
+        //public async Task<IActionResult> Reset(VmUserResetPass model)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(model);
+        //    }
+
+
+        //}
+
+
 
         public IActionResult Login()
         {
