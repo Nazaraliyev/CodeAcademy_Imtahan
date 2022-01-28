@@ -24,5 +24,13 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
 
 
 
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+
+
     }
 }
