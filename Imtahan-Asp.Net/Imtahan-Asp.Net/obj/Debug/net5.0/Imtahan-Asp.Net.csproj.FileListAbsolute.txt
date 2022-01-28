@@ -183,3 +183,4 @@ C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\o
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Settings\Edit.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Settings\Index.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Work\Index.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Work\Create.cshtml.g.cs
