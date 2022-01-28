@@ -12,6 +12,6 @@ namespace Imtahan_Asp.Net.ViewModel
 
         public int page { get; set; }
 
-        public int count { get; set; }
+        public decimal count { get; set; }
     }
 }

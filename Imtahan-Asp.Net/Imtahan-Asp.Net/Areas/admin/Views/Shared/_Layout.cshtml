@@ -68,7 +68,6 @@
                         <h6 class="collapse-header">User Components:</h6>
                         <a class="collapse-item" asp-area="admin" asp-controller="account" asp-action="index">Users</a>
                         <a class="collapse-item" asp-area="admin" asp-controller="role" asp-action="index">Roles</a>
-
                     </div>
                 </div>
             </li>
@@ -85,10 +84,19 @@
             <!-- Heading -->
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" asp-area="admin" asp-controller="team" asp-action="index">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTeam"
+                   aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
                     <span>Teams</span>
                 </a>
+                <div id="collapseTeam" class="collapse" aria-labelledby="collapseTeam"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Team Components:</h6>
+                        <a class="collapse-item" asp-area="admin" asp-controller="team" asp-action="index">Member</a>
+                        <a class="collapse-item" asp-area="admin" asp-controller="position" asp-action="index">Position</a>
+                    </div>
+                </div>
             </li>
 
             <!-- Nav Item - Tables -->

@@ -28,12 +28,12 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
 
         public async Task<IActionResult> Index(int page = 0)
         {
-            int Count = 6;
+            int Count = 2;
             VmTeamIndex model = new VmTeamIndex()
             {
-                teams = await _context.teams.Include(t =>t.TeamPosition).Skip(Count*page).Take(Count).ToListAsync(),
+                teams = await _context.teams.Include(t => t.TeamPosition).Skip(Count * page).Take(Count).ToListAsync(),
                 page = page,
-                count = Count
+                count =  Math.Ceiling((decimal)_context.teams.Count()/Count),
             };
             return View(model);
         }
