@@ -20,7 +20,7 @@ namespace Imtahan_Asp.Net.ViewModel
 
 
 
-        [Required]
+        [Required, Display(Name = "Photo")]
         public IFormFile PhotoFile { get; set; }
 
 

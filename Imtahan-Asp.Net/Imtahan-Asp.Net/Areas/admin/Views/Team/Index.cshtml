@@ -26,8 +26,8 @@
                         <th scope="row">@i</th>
                         <td>@member.Photo</td>
                         <td>@member.Name</td>
-                        <td>@(member.Content.Length > 200 ? member.Content.Substring(200) : member.Content)</td>
-                        <td>@member.TeamPosition</td>
+                        <td>@(member.Content.Length > 200 ? member.Content.Substring(0,200) : member.Content)</td>
+                        <td>@member.TeamPosition.Name</td>
                         <td>
                             <a asp-action="Update" class="btn btn-success" asp-route-id="@member.Id">Update</a>
                             <a asp-action="reset" class="btn btn-warning" asp-route-id="@member.Id">Details</a>
