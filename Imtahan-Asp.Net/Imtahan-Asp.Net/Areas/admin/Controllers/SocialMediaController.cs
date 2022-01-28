@@ -73,5 +73,24 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
             _context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }
+
+
+
+        public async Task<IActionResult> Delete(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            if (await _context.socialMedias.FindAsync(Id) == null)
+            {
+                return NotFound();
+            }
+
+            _context.socialMedias.Remove(await _context.socialMedias.FindAsync(Id));
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
