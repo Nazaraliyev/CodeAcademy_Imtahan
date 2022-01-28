@@ -1,0 +1,44 @@
+﻿@model List<CustomUser>
+
+
+<div class="container-fluid">
+    <h2 class="mb-5">Users</h2>
+    <a asp-action="create" class="btn btn-primary mb-3">Create New User</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Modify</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 1;
+
+                foreach (var user in Model)
+                {
+                    <tr>
+                        <th scope="row">@i</th>
+                        <td>@user.Name</td>
+                        <td>@user.Surname</td>
+                        <td>@user.Email</td>
+                        <td>@user.PhoneNumber</td>
+                        <td>
+                            <a asp-action="Update" class="btn btn-success" asp-route-id="@user.Id">Update</a>
+                            <a asp-action="Update" class="btn btn-success" asp-route-id="@user.Id">Reset</a>
+                            <a asp-action="Update" class="btn btn-success" asp-route-id="@user.Id" onclick="return confirm('Are you sure?')">Delete</a>
+                        </td>
+
+                    </tr>
+
+                    i++;
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
