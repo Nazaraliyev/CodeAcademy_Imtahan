@@ -43,18 +43,25 @@
         </tbody>
     </table>
 
-    <nav aria-label="...">
-        <ul class="pagination">
-            <li class="page-item @(Model.page == 0? "disabled" : "")">
-                <a class="page-link">Previous</a>
-            </li>
-            @for(int j = 0; j < Model.count; j++)
-            {
-                <li class="page-item @(Model.page == j ? "active" : "")"><a class="page-link" asp-route-page="@j">@(j+1)</a></li>
-            }
-            <li class="page-item @(Model.page == Model.count-1? "disabled": "")">
-                <a class="page-link" href="#">Next</a>
-            </li>
-        </ul>
-    </nav>
+    @{
+        if (Model.count != 1 && Model.count != 0)
+        {
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item @(Model.page == 0? "disabled" : "")">
+                        <a class="page-link">Previous</a>
+                    </li>
+                    @for (int j = 0; j < Model.count; j++)
+                    {
+                        <li class="page-item @(Model.page == j ? "active" : "")"><a class="page-link" asp-route-page="@j">@(j+1)</a></li>
+                    }
+                    <li class="page-item @(Model.page == Model.count-1? "disabled": "")">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        }
+    }
+
+
 </div>

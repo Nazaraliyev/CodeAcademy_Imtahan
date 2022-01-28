@@ -182,5 +182,35 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+
+        public async Task<IActionResult> Delete(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            if (await _context.teams.FindAsync(Id) == null)
+            {
+                return NotFound();
+            }
+
+            Team willDeleteMemver = await _context.teams.FindAsync(Id);
+
+            string Image = Path.Combine(_webHost.WebRootPath, "assets/img/team", willDeleteMemver.Photo);
+            if (System.IO.File.Exists(Image))
+            {
+                System.IO.File.Delete(Image);
+            }
+
+            _context.teams.Remove(willDeleteMemver);
+            _context.SaveChanges();
+
+
+            return RedirectToAction(nameof(Index));
+
+
+        }
     }
 }
