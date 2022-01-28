@@ -14,6 +14,11 @@ namespace Imtahan_Asp.Net.Models
 
 
 
+        [MaxLength(100)]
+        public string Name { get; set; }
+
+
+
         [MaxLength(300), Required]
         public string Content { get; set; }
 

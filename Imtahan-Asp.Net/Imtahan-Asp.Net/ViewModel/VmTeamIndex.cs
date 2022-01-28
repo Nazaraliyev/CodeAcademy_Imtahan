@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Imtahan_Asp.Net.ViewModel
 {
-    public class VmTeam
+    public class VmTeamIndex
     {
         public List<Team> teams { get; set; }
-        public List<TeamPosition> teamPositions { get; set; }
-        public int PositionId { get; set; }
 
+        public int page { get; set; }
+
+        public int count { get; set; }
     }
 }

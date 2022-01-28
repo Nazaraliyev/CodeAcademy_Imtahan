@@ -1,20 +1,44 @@
-﻿
+﻿@model VmTeamIndex
 
 
 <div class="container-fluid">
     <h2 class="mb-5">Team Members</h2>
     <a asp-action="create" class="btn btn-primary mb-3">Create New Member</a>
-    <<table class="table">
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
+                <th scope="col">Photo</th>
                 <th scope="col">Name</th>
-                <th scope="col">Position</th>
                 <th scope="col">Info</th>
+                <th scope="col">Position</th>
                 <th scope="col">Modify</th>
             </tr>
         </thead>
         <tbody>
+
+            @{
+                int i = 1;
+
+                foreach (var member in Model.teams)
+                {
+                    <tr>
+                        <th scope="row">@i</th>
+                        <td>@member.Photo</td>
+                        <td>@member.Name</td>
+                        <td>@(member.Content.Length > 200 ? member.Content.Substring(200) : member.Content)</td>
+                        <td>@member.TeamPosition</td>
+                        <td>
+                            <a asp-action="Update" class="btn btn-success" asp-route-id="@member.Id">Update</a>
+                            <a asp-action="reset" class="btn btn-warning" asp-route-id="@member.Id">Details</a>
+                            <a asp-action="delete" class="btn btn-danger" asp-route-id="@member.Id" onclick="return confirm('Are you sure?')">Delete</a>
+                        </td>
+
+                    </tr>
+
+                    i++;
+                }
+            }
 
         </tbody>
     </table>
