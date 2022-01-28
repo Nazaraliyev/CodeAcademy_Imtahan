@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -13,22 +14,17 @@ namespace Imtahan_Asp.Net.Models
 
 
 
-        [MaxLength(100), Required]
-        public string Name { get; set; }
-
-
-
-        [MaxLength(100), Required]
-        public string Position { get; set; }
-
-
-
         [MaxLength(300), Required]
         public string Content { get; set; }
 
 
         [MaxLength(250), Required]
         public string Photo { get; set; }
+
+
+        [ForeignKey("TeamPositionId")]
+        public int TeamPositionId { get; set; }
+        public TeamPosition TeamPosition { get; set; }
 
     }
 }

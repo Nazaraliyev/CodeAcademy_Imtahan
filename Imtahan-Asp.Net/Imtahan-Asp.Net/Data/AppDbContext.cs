@@ -20,5 +20,8 @@ namespace Imtahan_Asp.Net.Data
         public DbSet<Setting> settings { get; set; }
         public DbSet<SocialMedia> socialMedias { get; set; }
         public DbSet<Team> teams { get; set; }
+        public DbSet<TeamPosition> teamPositions { get; set; }
+
+
     }
 }
