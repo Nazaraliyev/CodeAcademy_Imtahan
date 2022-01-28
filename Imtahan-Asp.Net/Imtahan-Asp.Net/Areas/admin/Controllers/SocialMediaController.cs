@@ -59,5 +59,19 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
 
             return View(await _context.socialMedias.FindAsync(Id));
         }
+
+
+        [HttpPost]
+        public IActionResult Update(SocialMedia model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            _context.socialMedias.Update(model);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
