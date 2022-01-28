@@ -122,9 +122,65 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
                 teamPositions = await _context.teamPositions.ToListAsync(),
             };
 
-            return View(model);
+            return View(model); 
+        }
 
-            
+
+        [HttpPost]
+        public IActionResult Update(VmTeamUpdate model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            if(model.PhotoFile != null)
+            {
+                if (model.PhotoFile.ContentType == "image/jpeg" || model.PhotoFile.ContentType == "image/png")
+                {
+                    if (model.PhotoFile.Length > 3 * 1024 * 1024)
+                    {
+                        ModelState.AddModelError("", "You can only upload Image until 3mb");
+                        return View(model);
+                    }
+
+
+                    string oldImage = Path.Combine(_webHost.WebRootPath, "assets/img/team", model.Photo);
+                    if (System.IO.File.Exists(oldImage))
+                    {
+                        System.IO.File.Delete(oldImage);
+                    }
+
+
+                    string fileName = Guid.NewGuid() + "-" + model.PhotoFile.FileName;
+                    string filePath = Path.Combine(_webHost.WebRootPath, "assets/img/team", fileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        model.PhotoFile.CopyTo(stream);
+                    }
+
+                    model.Photo = fileName;
+                }
+                else
+                {
+                    ModelState.AddModelError("", "You can only upload image file");
+                    return View(model);
+                }
+            }
+
+            Team member = new Team()
+            {
+                Id = model.Id,
+                Name = model.Name,
+                Content = model.Content,
+                Photo = model.Photo,
+                TeamPositionId = model.PositionId
+            };
+
+            _context.teams.Update(member);
+            _context.SaveChanges();
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

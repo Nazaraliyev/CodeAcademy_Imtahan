@@ -167,3 +167,4 @@ C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\o
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Position\Create.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Position\Update.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Team\Create.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Team\Update.cshtml.g.cs
