@@ -10,7 +10,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Photo</th>
                 <th scope="col">Name</th>
-                <th scope="col">Info</th>
+                <th scope="col" style="width : 450px">Info</th>
                 <th scope="col">Position</th>
                 <th scope="col">Modify</th>
             </tr>
@@ -24,7 +24,9 @@
                 {
                     <tr>
                         <th scope="row">@i</th>
-                        <td>@member.Photo</td>
+                        <td>
+                            <img src ="~/assets/img/team/@member.Photo" style="width : 100px; height: 100px; object-fit : cover;"/>
+                        </td>
                         <td>@member.Name</td>
                         <td>@(member.Content.Length > 200 ? member.Content.Substring(0,200) : member.Content)</td>
                         <td>@member.TeamPosition.Name</td>
