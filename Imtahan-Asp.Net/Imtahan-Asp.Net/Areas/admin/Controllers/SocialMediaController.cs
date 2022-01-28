@@ -1,5 +1,6 @@
 ﻿using Imtahan_Asp.Net.Data;
 using Imtahan_Asp.Net.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace Imtahan_Asp.Net.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize]
     public class SocialMediaController : Controller
     {
         private readonly AppDbContext _context;

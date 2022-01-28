@@ -1,6 +1,7 @@
 ﻿using Imtahan_Asp.Net.Data;
 using Imtahan_Asp.Net.Models;
 using Imtahan_Asp.Net.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 namespace Imtahan_Asp.Net.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize]
     public class WorkController : Controller
     {
         private readonly AppDbContext _context;

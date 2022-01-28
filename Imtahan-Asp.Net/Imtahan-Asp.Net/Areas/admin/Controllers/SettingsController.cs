@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Imtahan_Asp.Net.Data;
 using Imtahan_Asp.Net.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Imtahan_Asp.Net.Areas.admin.Controllers
 {
     [Area("admin")]
+    [Authorize]
     public class SettingsController : Controller
     {
         private readonly AppDbContext _context;

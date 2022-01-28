@@ -1,6 +1,7 @@
 ﻿using Imtahan_Asp.Net.Data;
 using Imtahan_Asp.Net.Models;
 using Imtahan_Asp.Net.ViewModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Imtahan_Asp.Net.Areas.admin.Controllers
 {
-    [Area("admin")]
+    [Area("admin"), Authorize]
     public class AccountController : Controller
     {
         private readonly AppDbContext _context;
@@ -175,7 +176,7 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
         }
 
 
-
+        [AllowAnonymous]
         public IActionResult Login()
         {
             if (_signInManager.IsSignedIn(User))
@@ -185,7 +186,7 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
             return View();
         }
 
-
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Login(VmUserLogin model)
         {
