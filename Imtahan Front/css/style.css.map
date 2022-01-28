@@ -1,8 +1,12 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,eAAe,EAAE,IAAI;EACrB,UAAU,EAAE,IAAI;CACnB",
+    "mappings": "AAGA,AAAA,CAAC,CAAA;EACG,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,eAAe,EAAE,IAAI;EACrB,UAAU,EAAE,IAAI;CACnB;;AERD,AAAA,OAAO,CAAA;EACH,gBAAgB,EAAE,8BAA8B;EAChD,mBAAmB,EAAE,MAAM;EAC3B,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CAatB;;AApBD,AAQI,OARG,CAQH,eAAe,CAAA;EACX,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,IAAI;CASd;;AAnBL,AAWQ,OAXD,CAQH,eAAe,CAGX,yBAAyB,CAAA;EACrB,aAAa,EAAE,IAAI;CACtB;;AAbT,AAeQ,OAfD,CAQH,eAAe,CAOX,EAAE,CAAA;EACE,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,MAAM;CACpB",
     "sources": [
-        "../sass/style.scss"
+        "../sass/style.scss",
+        "../sass/_header.scss",
+        "../sass/_banner.scss",
+        "../sass/_teams.scss",
+        "../sass/_footer.scss"
     ],
     "names": [],
     "file": "style.css"
