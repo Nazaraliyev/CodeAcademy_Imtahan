@@ -151,3 +151,8 @@ C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\b
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Shared\Error.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\_ViewStart.cshtml.g.cs
