@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imtahan-Asp.Net", "Imtahan-Asp.Net\Imtahan-Asp.Net.csproj", "{E0B1AB23-B0E7-47A3-B9F2-F780AF74A823}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0B1AB23-B0E7-47A3-B9F2-F780AF74A823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0B1AB23-B0E7-47A3-B9F2-F780AF74A823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0B1AB23-B0E7-47A3-B9F2-F780AF74A823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0B1AB23-B0E7-47A3-B9F2-F780AF74A823}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24AD9F82-5BE5-428D-826C-D4A61FD0485E}
+	EndGlobalSection
+EndGlobal
