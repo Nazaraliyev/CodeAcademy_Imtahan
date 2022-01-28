@@ -39,6 +39,35 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
         }
 
 
+        [HttpPost]
+        public async Task<IActionResult> Create(VmUserCreate model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            CustomUser user = new CustomUser()
+            {
+                Name = model.Name,
+                Surname = model.Surname,
+                Email = model.Email,
+                UserName = model.Email,
+                PhoneNumber = model.Phone
+            };
+
+
+            var result = await _userManager.CreateAsync(user, model.Password);
+
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            return View();
+        }
+
+
 
 
         public IActionResult Login()
