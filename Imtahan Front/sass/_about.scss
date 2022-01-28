@@ -1,0 +1,21 @@
+#about{
+    .about-item{
+        padding: 20px;
+    }
+    h2{
+        font-weight: 300;
+        margin-bottom: 50px;
+    }
+
+    p{
+        margin-bottom: 20px;
+        color: $main-text-color
+    }
+
+    #about-img-block{
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+}

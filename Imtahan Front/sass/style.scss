@@ -1,16 +1,31 @@
 $primary-color : #800971;
 
+$primary-font : 'Roboto', sans-serif;
+$main-text-color :rgba(0, 0, 0, 0.5);
+
 
 *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
+    font-family: $primary-font;
+    box-sizing: border-box !important;
+}
+
+
+section{
+    margin: 100px 0;
+    &:first-child{
+        margin-top: 0
+    }
 }
 
 
 
 @import "header";
 @import "banner";
+@import "about";
 @import "teams";
+@import "portfolio";
 @import "footer";

@@ -3,6 +3,17 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  font-family: "Roboto", sans-serif;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+}
+
+section {
+  margin: 100px 0;
+}
+
+section:first-child {
+  margin-top: 0;
 }
 
 #banner {
@@ -33,5 +44,166 @@
 #banner #banner-content h1 {
   font-weight: 300;
   font-size: 2.8rem;
+}
+
+#about .about-item {
+  padding: 20px;
+}
+
+#about h2 {
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+#about p {
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#about #about-img-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#teams .team-member {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#teams .team-member h3 {
+  font-weight: bolder;
+  margin-bottom: 0px;
+}
+
+#teams .team-member h5 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#teams .team-member p {
+  font-size: 14px;
+}
+
+#portfolio {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#portfolio h2 {
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+#portfolio p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+#portfolio .row {
+  margin: 0;
+  padding: 0;
+}
+
+#portfolio [class^="col"] {
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#portfolio [class^="col"] h5 {
+  display: none;
+  color: #fff;
+  position: absolute;
+  z-index: 2;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+#portfolio [class^="col"]:before {
+  content: "";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: .8;
+  background-color: #800971;
+  position: absolute;
+  display: none;
+}
+
+#portfolio [class^="col"]:hover h5 {
+  display: block;
+}
+
+#portfolio [class^="col"]:hover::before {
+  display: block;
+}
+
+footer {
+  padding: 100px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+footer h2 {
+  font-size: 50px;
+  font-weight: 100;
+  margin-bottom: 50px;
+}
+
+footer p {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+footer #footer-social li {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 5px;
+}
+
+footer #footer-social li a {
+  color: #fff;
+}
+
+footer form button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #C54D8D;
+  color: #fff;
+  border: none;
+}
+
+footer form label {
+  font-weight: 100;
 }
 /*# sourceMappingURL=style.css.map */

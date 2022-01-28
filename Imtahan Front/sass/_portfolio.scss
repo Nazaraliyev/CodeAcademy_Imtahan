@@ -1,0 +1,58 @@
+#portfolio{
+    color: $main-text-color;
+    h2{
+        font-weight: 100;
+        font-size: 4rem;
+    }
+
+    p{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .row{
+        margin: 0;
+        padding: 0;
+    }
+
+    [class^="col"]{
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 0;
+        box-sizing: border-box;
+        h5{
+            display: none;
+            color: #fff;
+            position: absolute;
+            z-index: 2;
+            font-weight: 300;
+            font-size: 2rem;
+        }
+
+        &:before{
+            content: "";
+            display: block;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: .8;
+            background-color: $primary-color;
+            position: absolute;
+            display: none;
+        }
+
+        &:hover{
+             h5{
+                 display: block;
+             }
+
+             &::before{
+                 display: block;
+             }
+        }
+    }
+}
