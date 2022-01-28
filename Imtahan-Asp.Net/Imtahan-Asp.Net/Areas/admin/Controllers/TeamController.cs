@@ -96,5 +96,35 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
             return RedirectToAction(nameof(Index));
 
         }
+
+
+        public async Task<IActionResult> Update(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            if (await _context.teams.FindAsync(Id) == null)
+            {
+                return NotFound();
+            }
+
+            Team member = await _context.teams.FindAsync(Id);
+
+            VmTeamUpdate model = new VmTeamUpdate()
+            {
+                Id = member.Id,
+                Name = member.Name,
+                Content = member.Content,
+                PositionId = member.TeamPositionId,
+                Photo = member.Photo,
+                teamPositions = await _context.teamPositions.ToListAsync(),
+            };
+
+            return View(model);
+
+            
+        }
     }
 }
