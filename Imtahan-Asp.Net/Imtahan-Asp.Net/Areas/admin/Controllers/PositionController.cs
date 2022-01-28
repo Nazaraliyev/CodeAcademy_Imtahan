@@ -70,7 +70,30 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
         }
 
 
+        [HttpPost]
+        public async Task<IActionResult> Update(TeamPosition model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
 
+            if (await _context.teamPositions.AnyAsync(tp => tp.Name == model.Name))
+            {
+                if (_context.teamPositions.FirstOrDefault(tp => tp.Name == model.Name).Id == model.Id)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+
+                ModelState.AddModelError("", "This Position has exist in Position List");
+                return View(model);
+            }
+
+            _context.teamPositions.Update(model);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+
+        }
 
 
     }
