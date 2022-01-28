@@ -32,7 +32,7 @@
                         <td>@member.TeamPosition.Name</td>
                         <td>
                             <a asp-action="Update" class="btn btn-success" asp-route-id="@member.Id">Update</a>
-                            <a asp-action="reset" class="btn btn-warning" asp-route-id="@member.Id">Details</a>
+                            <a asp-action="detail" class="btn btn-warning" asp-route-id="@member.Id">Details</a>
                             <a asp-action="delete" class="btn btn-danger" asp-route-id="@member.Id" onclick="return confirm('Are you sure?')">Delete</a>
                         </td>
                     </tr>

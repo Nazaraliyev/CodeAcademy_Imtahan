@@ -1,0 +1,81 @@
+﻿@model Imtahan_Asp.Net.Models.Setting
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Setting</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Logo" class="control-label"></label>
+                <input asp-for="Logo" class="form-control" />
+                <span asp-validation-for="Logo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BannerBackImg" class="control-label"></label>
+                <input asp-for="BannerBackImg" class="form-control" />
+                <span asp-validation-for="BannerBackImg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BannerImg" class="control-label"></label>
+                <input asp-for="BannerImg" class="form-control" />
+                <span asp-validation-for="BannerImg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BannerHeader" class="control-label"></label>
+                <input asp-for="BannerHeader" class="form-control" />
+                <span asp-validation-for="BannerHeader" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BannerContent" class="control-label"></label>
+                <input asp-for="BannerContent" class="form-control" />
+                <span asp-validation-for="BannerContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutHeader" class="control-label"></label>
+                <input asp-for="AboutHeader" class="form-control" />
+                <span asp-validation-for="AboutHeader" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutContent" class="control-label"></label>
+                <input asp-for="AboutContent" class="form-control" />
+                <span asp-validation-for="AboutContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AboutImg" class="control-label"></label>
+                <input asp-for="AboutImg" class="form-control" />
+                <span asp-validation-for="AboutImg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FooterContent" class="control-label"></label>
+                <input asp-for="FooterContent" class="form-control" />
+                <span asp-validation-for="FooterContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FooterEmail" class="control-label"></label>
+                <input asp-for="FooterEmail" class="form-control" />
+                <span asp-validation-for="FooterEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FooterPhone" class="control-label"></label>
+                <input asp-for="FooterPhone" class="form-control" />
+                <span asp-validation-for="FooterPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

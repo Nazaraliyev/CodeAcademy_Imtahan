@@ -100,7 +100,6 @@ C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\o
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Imtahan-Asp.Net.TagHelpers.output.cache
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Imtahan-Asp.Net.RazorCoreGenerate.cache
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -171,3 +170,16 @@ C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\o
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\SocialMedia\Index.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\SocialMedia\Create.cshtml.g.cs
 C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\SocialMedia\Update.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Message\Index.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Team\Detail.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Messages\Create.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Messages\Delete.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Messages\Details.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Messages\Edit.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Messages\Index.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Settings\Create.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Settings\Delete.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Settings\Details.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Settings\Edit.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Settings\Index.cshtml.g.cs
+C:\Users\classtime\Desktop\CodeAcademy_Imtahan\Imtahan-Asp.Net\Imtahan-Asp.Net\obj\Debug\net5.0\Razor\Areas\admin\Views\Work\Index.cshtml.g.cs

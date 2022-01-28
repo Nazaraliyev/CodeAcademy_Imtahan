@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Imtahan_Asp.Net.Models.Setting>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Logo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BannerBackImg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BannerImg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BannerHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BannerContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AboutHeader)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AboutContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AboutImg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FooterContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FooterEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FooterPhone)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BannerBackImg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BannerImg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BannerHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BannerContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AboutHeader)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AboutContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AboutImg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FooterContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FooterEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FooterPhone)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -212,5 +212,24 @@ namespace Imtahan_Asp.Net.Areas.admin.Controllers
 
 
         }
+
+
+
+        public async Task<IActionResult> Detail(int? Id)
+        {
+            if (Id == null)
+            {
+                return NotFound();
+            }
+
+            if (await _context.teams.FindAsync(Id) == null)
+            {
+                return NotFound();
+            }
+
+
+            return View(await _context.teams.Include(t => t.TeamPosition).FirstOrDefaultAsync(t => t.Id == Id));
+
+        }
     }
 }
